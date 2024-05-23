@@ -21,13 +21,14 @@ module.exports = { session: process.env.SESSION_ID || 'zokk',
     HEROKU_APP_NAME : process.env.HEROKU_APP_NAME,
     HEROKU_APY_KEY : process.env.HEROKU_APY_KEY ,
     WARN_COUNT : process.env.WARN_COUNT || '3' ,
-    //GPT : process.env.OPENAI_API_KEY,
+    GPT : process.env.GPT,
     DP : process.env.STARTING_BOT_MESSAGE || 'oui',
     ATD : process.env.ANTI_DELETE_MESSAGE || 'non',            
     DATABASE_URL,
     DATABASE: DATABASE_URL === databasePath
         ? "postgres://db_7xp9_user:6hwmTN7rGPNsjlBEHyX49CXwrG7cDeYi@dpg-cj7ldu5jeehc73b2p7g0-a.oregon-postgres.render.com/db_7xp9" : "postgres://db_7xp9_user:6hwmTN7rGPNsjlBEHyX49CXwrG7cDeYi@dpg-cj7ldu5jeehc73b2p7g0-a.oregon-postgres.render.com/db_7xp9",
-    /* new Sequelize({
+   DB: process.env.DB || 'postgres://neoverse:pomrleUMXwlmlpIcW2oFJmMX0CXzaFkf@dpg-combonun7f5s73d7uoog-a.oregon-postgres.render.com/neoverse_wz98',
+                  /* new Sequelize({
      dialect: 'sqlite',
      storage: DATABASE_URL,
      logging: false,
